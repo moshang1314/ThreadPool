@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(TP)
+set(CMAKE_CXX_STANDARD 14)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR})
+set(SRC_LIST threadpool.cpp test.cpp)
+include_directories(.)
+add_executable(ThreadPool ${SRC_LIST})
+target_link_libraries(ThreadPool pthread)
